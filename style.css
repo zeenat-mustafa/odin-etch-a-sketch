@@ -1,3 +1,13 @@
+.h1 {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: rgb(66, 6, 121);
+    font-size: 48px;
+}
+
 #container {
     display: flex;
     flex-wrap: wrap;
@@ -10,4 +20,19 @@
 .grid-square {
     box-sizing: border-box;
     border: 1px solid rgb(227, 225, 225);
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+#sizeBtn {
+    padding: 5px 10px;
+    border: 2px solid black;
+    background: rgb(255, 230, 248);
+    color: rgb(39, 2, 74);
+    font-size: 0.9rem;
 }

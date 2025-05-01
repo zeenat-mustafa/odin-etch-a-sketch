@@ -6,6 +6,7 @@ const containerWidth = 500;
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
     var color = '#';
+
     for (var i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)];
     }
@@ -16,8 +17,9 @@ function createGrid() {
     const squareSize = containerWidth / gridSize;
 
     for(let i = 0; i < gridSize * gridSize; i++){
-        const square = document.createElement("div");
+        let square = document.createElement("div");
         square.classList.add("grid-square");
+
         square.addEventListener("mouseover", () => {
             square.style.backgroundColor = getRandomColor();
         });
@@ -33,6 +35,7 @@ createGrid();
 
 function changeSquareNumber () {
     let size = Number(prompt("Enter the Number of Squares per size. Note: 'Max 100'"));
+
     if (size <= 100) {
         gridSize = size;
         container.innerHTML = '';
