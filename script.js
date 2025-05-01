@@ -3,6 +3,15 @@ let sizeBtn = document.querySelector("button");
 let gridSize = 16;
 const containerWidth = 500;
 
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
 function createGrid() {
     const squareSize = containerWidth / gridSize;
 
@@ -10,7 +19,7 @@ function createGrid() {
         const square = document.createElement("div");
         square.classList.add("grid-square");
         square.addEventListener("mouseover", () => {
-            square.style.backgroundColor = "palevioletred"
+            square.style.backgroundColor = getRandomColor();
         });
 
         square.style.width = `${squareSize}px`;
